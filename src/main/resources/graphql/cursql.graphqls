@@ -1,0 +1,15 @@
+type Curs {
+    id: ID!,
+    titlu: String!,
+    descriere: String!,
+    autor: String!
+}
+
+type Query {
+    cursuri(numar: Int):[Curs]
+    curs(id: ID):Curs
+}
+
+type Mutation {
+    creareCurs(titlu: String!, descriere: String!, autor: String!):Curs
+}
